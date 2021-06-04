@@ -124,7 +124,7 @@ export class AddonStarboard extends EksAddon implements iam.IGrantable {
         values: merge(
           {
             image: {
-              repository: 'my-custom-registry.com/aquasec/starboard-operator',
+              repository: 'default-docker-3rdparty.funhub.tech.dz.pb.de/aquasec/starboard-operator',
               tag: '0.10.1',
             },
             rbac: {
@@ -137,16 +137,16 @@ export class AddonStarboard extends EksAddon implements iam.IGrantable {
             },
             targetNamespaces: targetNamespaces,
             trivy: {
-              imageRef: 'my-custom-registry.com/aquasec/trivy:0.16.0',
+              imageRef: 'default-docker-3rdparty.funhub.tech.dz.pb.de/aquasec/trivy:0.16.0',
             },
             kubeBench: {
-              imageRef: 'my-custom-registry.com/aquasec/kube-bench:0.5.0',
+              imageRef: 'default-docker-3rdparty.funhub.tech.dz.pb.de/aquasec/kube-bench:0.5.0',
             },
             polaris: {
-              imageRef: 'my-custom-registry.com/fairwinds/polaris:3.2',
+              imageRef: 'default-docker-3rdparty.funhub.tech.dz.pb.de/fairwinds/polaris:3.2',
             },
             conftest: {
-              imageRef: 'my-custom-registry.com/openpolicyagent/conftest:v0.23.0',
+              imageRef: 'default-docker-3rdparty.funhub.tech.dz.pb.de/openpolicyagent/conftest:v0.23.0',
             },
           },
           { ...props.valuesOverride },
